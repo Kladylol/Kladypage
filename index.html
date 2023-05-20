@@ -1,507 +1,1167 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.css" rel="stylesheet">
-	<link href="./node_modules/docslider/docSlider.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- saved from url=(0018)https://milady.gg/ -->
+<html
+    style="--w3m-color-fg-1: rgb(20,20,20); --w3m-color-fg-2: rgb(121,134,134); --w3m-color-fg-3: rgb(158,169,169); --w3m-color-bg-1: rgb(255,255,255); --w3m-color-bg-2: rgb(241,243,243); --w3m-color-bg-3: rgb(228,231,231); --w3m-color-overlay: rgba(0,0,0,0.1); --w3m-accent-color: #3396FF; --w3m-accent-fill-color: #FFFFFF; --w3m-z-index: 89; --w3m-background-color: #3396FF; --w3m-background-border-radius: 8px; --w3m-container-border-radius: 30px; --w3m-wallet-icon-border-radius: 15px; --w3m-wallet-icon-large-border-radius: 30px; --w3m-wallet-icon-small-border-radius: 7px; --w3m-input-border-radius: 28px; --w3m-button-border-radius: 10px; --w3m-notification-border-radius: 36px; --w3m-secondary-button-border-radius: 28px; --w3m-icon-button-border-radius: 50%; --w3m-button-hover-highlight-border-radius: 10px; --w3m-text-big-bold-size: 20px; --w3m-text-big-bold-weight: 600; --w3m-text-big-bold-line-height: 24px; --w3m-text-big-bold-letter-spacing: -0.03em; --w3m-text-big-bold-text-transform: none; --w3m-text-xsmall-bold-size: 10px; --w3m-text-xsmall-bold-weight: 700; --w3m-text-xsmall-bold-line-height: 12px; --w3m-text-xsmall-bold-letter-spacing: 0.02em; --w3m-text-xsmall-bold-text-transform: uppercase; --w3m-text-xsmall-regular-size: 12px; --w3m-text-xsmall-regular-weight: 600; --w3m-text-xsmall-regular-line-height: 14px; --w3m-text-xsmall-regular-letter-spacing: -0.03em; --w3m-text-xsmall-regular-text-transform: none; --w3m-text-small-thin-size: 14px; --w3m-text-small-thin-weight: 500; --w3m-text-small-thin-line-height: 16px; --w3m-text-small-thin-letter-spacing: -0.03em; --w3m-text-small-thin-text-transform: none; --w3m-text-small-regular-size: 14px; --w3m-text-small-regular-weight: 600; --w3m-text-small-regular-line-height: 16px; --w3m-text-small-regular-letter-spacing: -0.03em; --w3m-text-small-regular-text-transform: none; --w3m-text-medium-regular-size: 16px; --w3m-text-medium-regular-weight: 600; --w3m-text-medium-regular-line-height: 20px; --w3m-text-medium-regular-letter-spacing: -0.03em; --w3m-text-medium-regular-text-transform: none; --w3m-font-family: -apple-system, system-ui, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Ubuntu, &#39;Helvetica Neue&#39;, sans-serif; --w3m-success-color: rgb(38,181,98); --w3m-error-color: rgb(242, 90, 103); --w3m-background-image-url: none;">
     <style>
-        body {
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-			background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./$KLAY.png');
-			background-repeat: repeat; /* This will tile the image */
-			background-size: cover;
-		}
-
-        .section {
-            text-align: center;
-            padding: 50px;
-			padding-top:5vh;
-			flex-direction: column;
-            font-size: 30px;
-            height: 100vh; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        video {
+            margin: 0 auto;
+            display: block;
         }
-
-		.tv-container {
-			position: relative;
-			width: 50vw;
-			height: 50vh;
-			margin-top:0vh;
-		}
-
-		.tv-image {
-			width: 90%;
-			height: 100%;
-		}
-
-		.youtube-video {
-			position: absolute;
-			border-radius: 15px;
-			top: 15%;  /* Adjust these values */
-			left: 25%; /* to fit video in the TV screen image */
-			width: 53%; /* Adjust these values */
-			height: 42%; /* to fit video in the TV screen image */
-		}
-
-        /* Replace the url() with your own images */
-        .section1 {
-            background-image: url("https://example.com/sample1.jpg");
-            background-size: cover;
-        }
-
-        .section2 {
-            background-image: url("https://example.com/sample2.jpg");
-            background-size: cover;
-        }
-
-        .section3 {
-            background-image: url("https://example.com/sample3.jpg");
-            background-size: cover;
-        }
-
-		.section4 {
-            background-image: url("https://example.com/sample3.jpg");
-            background-size: cover;
-        }
-
-		.section5 {
-            background-image: url("https://example.com/sample3.jpg");
-            background-size: cover;
-        }
-
-		.header {
-			position: sticky;
-			top: 0;
-			width: 100%;
-			height: 5vh;
-			background-color: #fff;
-			background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);  /* change this line */
-			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-			z-index: 1000;
-		}
-
-		.header-content {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height:100%;
-			padding: 0;
-		}
-
-		.logo {
-			height: 70%;
-			border-radius: 10px;
-			flex-grow: 0; /* Make sure the logo doesn't grow */
-			margin-right: 1vw;
-		}
-
-		.nav_header {
-			display: flex;
-			flex-grow: 1; /* Make the nav grow to take up remaining space */
-			justify-content: space-between; /* Space items equally */
-			align-items: center;
-		}
-
-		.header-button {
-			flex-grow: 0; /* Make sure the button doesn't grow */
-		}
-
-		h1 {
-			text-align: center;
-			margin-right:2vw;
-		}
-
-		nav a {
-			color:black;
-			font-size:23px;
-			margin:0;
-		}
-
-		.header-button {
-			flex-grow: 0;
-			padding: 0.5vw 0.5vh;
-			background: linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%); /* Light to dark gradient */
-			border: 1px solid #808080; /* Dark border */
-			box-shadow: 5px 5px 0px 0px #161414;
-			font-family: "MS Sans Serif", sans-serif; /* Windows 98 style font */
-			font-size : 32px;
-			text-decoration: none;
-			color: black;
-			cursor: pointer;
-			margin-left:5vw;
-			margin-right:2vw;
-		}
-
-		#section1 {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			width: 100%;
-			height: 100vh;
-			padding: 20px 0; 
-		}
-
-		#carousel {
-			width: 30%;
-			height: 35%;
-			margin-bottom : 12vh;
-		}
-
-		.carousel-image {
-			width: 100%;
-			height: auto;
-			object-fit: cover;
-			display: none;
-			opacity: 0;
-			border-radius: 15px;
-			transition: opacity 2s ease-in-out;
-		}
-
-		.carousel-image.active {
-			display: block;
-			opacity: 1;
-		}
-
-		#logo-product {
-			width: 40%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-		}
-
-		#logo {
-			width: 20%;
-			height: 50%;
-			border-radius: 15px;
-			object-fit: contain;
-		}
-
-		#product-name {
-			width: 30%;
-			text-align: center;
-			margin-left: 0vw;
-		}
-
-		#textbox {
-			width: 70%;
-			text-size-adjust: 2vw;
-			line-height:10px;
-			text-align: center;
-		}
-
-		#sns-links {
-			width: 80%;
-			display: flex;
-			justify-content: center;
-		}
-
-		.sns-buttons {
-			background-color: white;
-			border-radius: 50%;
-			padding: 10px;
-			margin: 10px;
-			display: inline-block;
-			text-align: center;
-			margin-bottom:2vh;
-		}
-
-		.about-textbox {
-			font-size:2vw;
-			line-height:1.3vh;
-		}
-
-		.fa-discord {
-			color: #7289DA;
-		}
-
-		.fa-twitter {
-			color: #1DA1F2;
-		}
-
-		.fa-instagram {
-			color: #C32AA3;
-		}
-
-		#buttons {
-			width: 80%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			
-		}
-
-		.button-row {
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			margin-bottom:3vw;
-		}
-		
-		.button-style {
-			flex-grow: 0;
-			padding: 10px 20px;
-			background: linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%); /* Light to dark gradient */
-			border: 1px solid #808080; /* Dark border */
-			box-shadow: 5px 5px 0px 0px #161414;
-			font-family: "MS Sans Serif", sans-serif; /* Windows 98 style font */
-			font-size : 32px;
-			text-decoration: none;
-			color: black;
-			cursor: pointer;
-			margin-right : 3vw;
-		}
-
-		.how-to-buy-container {
-			display: flex;
-			flex-direction: column;
-			align-items: space-between;
-			justify-content: space-between;
-			height: 80vh; /* Adjust this based on the number of boxes and their spacing */
-			margin-bottom:0vh;
-		}
-
-		.how-to-buy-box {
-			display: flex;
-			align-items: center;
-			justify-content: start;
-			width: 90vw;
-			height: 16vh;
-			background-color: white;
-			border-radius: 20px;
-			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-			margin-bottom: 10px;
-			padding: 20px 20px;
-			box-sizing: border-box;
-			margin: 20px;
-		}
-
-		.how-to-buy-box img {
-			height: 5vw;
-			width: 5vw;
-			margin-left:5vw;
-		}
-
-		.box-content {
-			line-height:10px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: start;
-			width: calc(90vw); /* subtract the margins of image and left margin of text */
-		}
-
-
-		.box-text {
-			margin-left: 10vw;
-			text-align: left;
-			font-size: 1.3vw;
-		}
-
-		.box-title {
-			margin-left: 10vw;
-			font-size: 1.6vw;
-			font-weight: 600;
-			text-align: left;
-			margin-bottom:1vh;
-		}
-
-		.donut-chart {
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			border: 30px solid #3498db;
-			border-top-color: transparent;
-		}
-
-
     </style>
-	<script>
-		window.onload = function() {
-		  var iframe = document.querySelector('.youtube-video');
-		  var loadingIcon = document.querySelector('.loading-icon');
-	
-		  iframe.onload = function() {
-			loadingIcon.style.display = 'none';
-			iframe.style.display = 'block';
-		  };
-		};
-	</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="The dogs have had their day, even the frogs had their day. It&#39;s time for otakus to unite and let Milady reign.">
+    <link rel="icon" href="https://milady.gg/favicon.ico">
+    <meta name="next-head-count" content="4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="Milady | Ladys | NFT&#39;s collection | coin | meme">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="Milady">
+    <meta property="og:title" content="Welcome to LADYS, the meme coin of Milady NFT collection.">
+    <meta property="og:description" content="LADYS is the tokenisation of the fully memetically optimized white pill.">
+    <meta property="og:url" content="https://milady.gg">
+    <meta property="og:image" content="https://milady.gg/images/logo.png">
+    <meta name="theme-color" content="#000">
+    <script async="" src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0VCPZS8TB5', {
+            page_path: window.location.pathname,
+        });
+    </script>
+    <link rel="preload" href="./Welcome to LADYS, the meme coin of Milady NFT collection._files/02033b0de59e8dd0.css"
+        as="style">
+    <link rel="stylesheet" href="./Welcome to LADYS, the meme coin of Milady NFT collection._files/02033b0de59e8dd0.css"
+        data-n-g="">
+    <link rel="preload" href="./Welcome to LADYS, the meme coin of Milady NFT collection._files/53fa15469dc309b1.css"
+        as="style">
+    <link rel="stylesheet" href="./Welcome to LADYS, the meme coin of Milady NFT collection._files/53fa15469dc309b1.css"
+        data-n-p=""><noscript data-n-css=""></noscript>
+    <script defer="" nomodule=""
+        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/polyfills-c67a75d1b6f99dc8.js.다운로드"></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/webpack-93d3c15c5369d7ee.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/framework-715a76d8b0695da7.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/main-087d7ce1d40c51fc.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/_app-bb3bd9f03fffb915.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/452-cb013bc584b5cdc2.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/863-464b210dec225dbb.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/331-0033de68a40eef23.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/index-710c539e752c2645.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/_buildManifest.js.다운로드"
+        defer=""></script>
+    <script src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/_ssgManifest.js.다운로드"
+        defer=""></script>
+    <link rel="stylesheet" href="./Welcome to LADYS, the meme coin of Milady NFT collection._files/stylesheet">
+    <title>Welcome to LADYS, the meme coin of Milady NFT collection.</title>
 </head>
 
 <body>
-	<header class="header">
-		<div class="header-content">
-			<img class="logo" src="klady.png" alt="Logo" />  
-			<h1>KLADY</h1>  
-			<nav class = "nav_header">
-				<a href="#Home">Home</a>  
-				<a href="#About">About</a>
-				<a href="#How to Buy">How to buy</a>
-				<a href="#Tokenomics">Tokenomics</a>
-				<a href="#Roadmap">Roadmap</a>
-			</nav>
-			<button class="header-button">🔥LFG</button>  
-		</div>
-	</header>
-
-	<div class = "docSlider">
-		<div id = "Home" class="section section1">
-			<!-- 1. Carousel -->
-			<div class="tv-container">
-				<img src="tv.png" alt="TV Image" class="tv-image">
-				<div class="loading-icon"></div>
-				<video class = "youtube-video" src = "video.mp4" muted autoplay> </video>
-			</div>
-
-			<!-- 2. Logo and Product Name -->
-			<div id="logo-product">
-				<img src="klady.png" id="logo" alt="Logo">
-				<h1 id="product-name">Klady</h1>
-			</div>
-			
-
-			<!-- 4. SNS Links -->
-			<div id="sns-links">
-				<a class="sns-buttons" href="https://discord.com/" target="_blank">
-				  <i class="fab fa-discord" style="font-size:45px;"></i>
-				</a>
-				<a class="sns-buttons" href="https://twitter.com/" target="_blank">
-				  <i class="fab fa-twitter" style="font-size:45px;"></i>
-				</a>
-				<a class="sns-buttons" href="https://instagram.com/" target="_blank">
-				  <i class="fab fa-instagram" style="font-size:45px;"></i>
-				</a>
-			</div>
-
-			<!-- 5. Buttons -->
-			<div id="buttons">
-				<!-- First row -->
-				<div class="button-row">
-					<button class = "button-style">🔥LFG</button>
-					<button class = "button-style">🔥LFG</button>
-					<button class = "button-style">🔥LFG</button>
-					<button class = "button-style">🔥LFG</button>
-					<button class = "button-style">🔥LFG</button>
-				</div>
-			</div>
-		</div>
-
-		<div id="About" class = "section section1">
-			<!-- about section title -->
-			<div class="about-title">
-			  <h1>ABOUT</h1>
-			</div>
-		  
-			<!-- about section text box -->
-			<div class="about-textbox">
-				<p>KLADY isn't just another meme coin - oh, no. It's a delightful concoction, a symphony of sorts, </p>
-				<p>if you will, a perfect blend of all things Milady and our feline friends. It exists in this </p>
-				<p>delectable state of equilibrium, balancing on the precipice of unyielding fandom. </p>
-				<p>Just picture it - the sly grin of a cat paired with the wide-eyed fascination of a true Milady fan. </p>
-				<p>'Well played, KLADYS. Well played indeed?</p>
-			</div>
-		  
-			<!-- carousel in about section -->
-			<div id="carousel" >
-				<img src="image1.png" class="carousel-image active" alt="Image 1">
-				<img src="image2.png" class="carousel-image" alt="Image 2">
-				<img src="image3.png" class="carousel-image" alt="Image 3">
-			</div>
-		  </div>
-
-		  <div id="How to Buy" class = "section section1">
-			<!-- about section title -->
-			<div class="about-title">
-				<h1>How to Buy</h1>
-			</div>
-			
-			<div class="how-to-buy-container">
-				<div class="how-to-buy-box">
-				  <img src="metamask.png" alt="Image 1">
-				  <div class="box-content">
-					<div class="box-title">Create a Wallet</div>
-					<div class="box-text">
-						<p>Download Metamask or your wallet of choice from the app store</p> 
-						<p>or google play store for free. For desktop users, download </p>
-						<p>the google chrome extension by going to metamask.io.</p>
-					</div>
-				  </div>
-				</div>
-
-				<div class="how-to-buy-box">
-				  <img src="eth.jpg" alt="Image 2">
-				  <div class="box-content">
-					<div class="box-title">Get Some ETH</div>
-					<div class="box-text">
-						<p>Have ETH in your wallet to switch to $KLADY. If you don’t have any ETH,</p> 
-						<p>you can buy directly on metamask, transfer from another wallet, or buy</p>
-						<p>on another exchange and send it to your wallet.</p>
-					</div>
-				  </div>
-				</div>
-
-				<div class="how-to-buy-box">
-					<img src="uniswap.png" alt="Image 2">
-					<div class="box-content">
-						<div class="box-title">Go to Uniswap</div>
-						<div class="box-text">
-							<p>Connect to Uniswap. Go to app.uniswap.org in google chrome or on the</p> 
-							<p>browser inside your Metamask app. Connect your wallet. Paste the $KLADY </p>
-							<p>prompts you for a wallet signature, sign.</p>
-						</div>
-					  </div>
-				</div>
-
-				<div class="how-to-buy-box">
-					<img src="swap.jpg" alt="Image 2">
-					<div class="box-content">
-						<div class="box-title">Switch ETH for $KLADY</div>
-						<div class="box-text">
-							<p>Switch ETH for $KLADY. We have ZERO taxes so you don’t need to worry</p> 
-							<p>about buying with a specific slippage, although you may need to use</p>
-							<p>slippage during times of market volatility.</p>
-						</div>
-					  </div>
-				</div>
-
-
-				<!-- Similar structure for other boxes -->
-			  </div>
-			</div>
-			<div id="Tokenomics" class = "section section1">
-				<!-- about section title -->
-				<div class="about-title">
-					<h1>Tokenomics</h1>
-				</div>
-
-				<div class="text-box">
-					<p>Total Supply :</p>
-					<p>999,999,999,999,999</p>
-				</div>
-
-				<div class="donut-chart"></div>
-			</div>
-		<div id = "Roadmap" class="section section5" style = "font-size: 60px;">
-			<!-- about section title -->
-			<div class="about-title">
-				<h1>Roadmap</h1>
-			</div>Coming Soon</div>
-
-			
-		</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js"></script>
-	<script src="https://kit.fontawesome.com/b17d4fa9e7.js" crossorigin="anonymous"></script>
-	<script>docSlider.init(); </script>
-	<script src="./carousel.js"></script>
-	
-		
+    <div id="__next">
+        <main>
+            <div
+                class="contain-bg fixed w-full overflow-y-auto h-full bg-[url(../$KLADY.png)] bg-no-repeat bg-cover bg-bottom">
+                <div class="navbar w-full z-20 top-0 left-0 shadow-[0_4px_6px_rgba(49,11,49,0.08)] md:h-[60px]">
+                    <div
+                        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[10px] lg:p-[8px]">
+                        <a href="https://milady.gg/"
+                            class="flex items-center w-[80px] lg:w-[126px] h-auto md:w-[116px]"><span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27183%27%20height=%2760%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="token logo"
+                                    src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Logo.1142c055.svg"
+                                    decoding="async" data-nimg="intrinsic" class="mr-3"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                                    srcset="https://milady.gg/_next/static/media/Logo.1142c055.svg?auto=format&amp;fit=max&amp;w=256&amp;q=100 1x, https://milady.gg/_next/static/media/Logo.1142c055.svg?auto=format&amp;fit=max&amp;w=384&amp;q=100 2x"><noscript></noscript></span></a>
+                        <div class="flex md:order-2 gap-x-3 items-center"><button type="button"
+                                class="w-[85px] lg:w-[120px] h-8 lg:h-[40px] font-font_primary text-color_text font-semibold bg-[#fff] text-[14px] lg:text-[16px] leading-6 border-solid border-[1px] border-border_color shadow-[2px_2px_0_#121212]">Buy
+                                Now</button><button type="button"
+                                class="font-font_primary block px-4 h-8 lg:h-[40px] text-[#FFF] bg-[#000] font-bold text-[14px] lg:text-[16px] leading-6 border-solid border-[1px] border-border_color shadow-[2px_2px_0_#121212]">Connect
+                                Wallet</button><button data-collapse-toggle="navbar-sticky" type="button"
+                                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                                aria-controls="navbar-sticky" aria-expanded="false"><span class="sr-only">Open main
+                                    menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                        clip-rule="evenodd"></path>
+                                </svg></button></div>
+                        <div class="hidden md:items-center md:justify-between w-full md:flex md:w-auto md:order-1"
+                            id="navbar-sticky">
+                            <ul
+                                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+                                <li><a href="https://milady.gg/#home"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">Home</a>
+                                </li>
+                                <li><a href="https://milady.gg/#about"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">About</a>
+                                </li>
+                                <li><a href="https://milady.gg/#howtobuy"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">How
+                                        to buy</a></li>
+                                <li><a href="https://milady.gg/#tokenomics"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">Tokenomics</a>
+                                </li>
+                                <li><a href="https://milady.gg/#roadmap"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">Roadmap</a>
+                                </li>
+                                <li><a href="https://milady.gg/bridge"
+                                        class="block py-2 pl-3 pr-4 font-semibold font-font_primary text-[16px] leading-[24px] text-[#000] text-opacity-100 hover:text-[#EB2F96]">ARB
+                                        Bridge</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute w-full h-[calc(100%-60px)] overflow-y-auto">
+                    <div id="home" class=" overflow-hidden">
+                        <div
+                            class="w-full px-[16px] md:px-0 md:max-w-[1220px] pt-[52px] md:pt-[48px] bg-[#3333333] mx-auto">
+                            <div class="flex flex-col-reverse md:flex-col md:flex justify-center">
+                                <video class="youtube-video" src="video.mp4" style ="width : 60%; height : 60%" controls muted autoplay> </video>
+                                <div>
+                                    <div class="w-full text-center md:max-w-[800px] md:mt-[48px] mx-auto">
+                                        
+                                        <div
+                                            class="font-normal text-[75px] leading-[105px] flex justify-center lg:justify-between items-end w-[245px] h-[60px] mx-auto">
+                                            <div class="w-[80px] h-[80px] mr-[16px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Lady.53752050.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/Lady.53752050.svg?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/Lady.53752050.svg?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span>
+                                            </div>
+                                            <div
+                                                class="font-bold text-[48px] leading-[60px] text-[#262626] font-font_primary m-0 p-0">
+                                                Milady</div>
+                                        </div>
+                                        <div
+                                            class="font-normal text-[18px] leading-[24px] md:text-[20px] md:leading-[28px] mt-[24px] text-[#1F1310] font-text px-[12px] md:px-0 font-style italic">
+                                            <div>Miladys knew this coin would come.</div>
+                                            <div class="mt-[12px]">LADYS may not be the meme coin Miladys want, but
+                                                LADYS is the meme coin Miladys need in these times of unbridled memetic
+                                                power.</div>
+                                            <div class="mt-[12px]">You like the art, we make the coin.</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex justify-center gap-y-4 gap-x-[24px] lg:gap-y-0 flex-wrap mt-[32px]">
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://twitter.com/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/twitter.0d19fa46.webp"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/twitter.0d19fa46.webp?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/twitter.0d19fa46.webp?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://t.me/miladymemecoinchannel"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/telgrrgrgrgr.de226323.webp"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/telgrrgrgrgr.de226323.webp?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/telgrrgrgrgr.de226323.webp?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://t.me/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/telgrrgrgrgr.de226323.webp"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/telgrrgrgrgr.de226323.webp?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/telgrrgrgrgr.de226323.webp?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://discord.com/invite/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2764%27%20height=%2764%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/discord.5fde1792.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/discord.5fde1792.svg?auto=format&amp;fit=max&amp;w=64 1x, https://milady.gg/_next/static/media/discord.5fde1792.svg?auto=format&amp;fit=max&amp;w=128 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://etherscan.io/token/0x12970E6868f88f6557B76120662c1B3E50A646bf"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/etherscan.0097f67c.webp"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/etherscan.0097f67c.webp?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/etherscan.0097f67c.webp?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://arbiscan.io/token/0x3b60ff35d3f7f62d636b067dd0dc0dfdad670e4e"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2740%27%20height=%2740%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/arbitrum.86c3aff8.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/arbitrum.86c3aff8.svg?auto=format&amp;fit=max&amp;w=48 1x, https://milady.gg/_next/static/media/arbitrum.86c3aff8.svg?auto=format&amp;fit=max&amp;w=96 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://coinmarketcap.com/currencies/milady-meme-coin/"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/cmc.950974e3.webp"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/cmc.950974e3.webp?auto=format&amp;fit=max&amp;w=96 1x, https://milady.gg/_next/static/media/cmc.950974e3.webp?auto=format&amp;fit=max&amp;w=256 2x"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] lg:mr-0 cursor-pointer"><a target="_blank"
+                                                href="https://www.coingecko.com/en/coins/milady-meme-coin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2756%27%20height=%2756%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/coingecko.e870d3d9.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                                        srcset="https://milady.gg/_next/static/media/coingecko.e870d3d9.svg?auto=format&amp;fit=max&amp;w=64 1x, https://milady.gg/_next/static/media/coingecko.e870d3d9.svg?auto=format&amp;fit=max&amp;w=128 2x"><noscript></noscript></span></a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-wrap justify-between md:justify-evenly mt-[32px] md:mt-[40px] md:mx-auto">
+                                        <a target="_blank"
+                                            href="https://www.okx.com/web3/dex?inputChain=1&amp;inputCurrency=ETH&amp;outputChain=1&amp;outputCurrency=0x12970e6868f88f6557b76120662c1b3e50a646bf"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/OkX.93c2cf90.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/OkX.93c2cf90.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/OkX.93c2cf90.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> OKX Dex</span>
+                                        </a><a target="_blank" href="https://www.bybit.com/en-US/trade/spot/LADYS/USDT"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Bybit.7b819e58.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/Bybit.7b819e58.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/Bybit.7b819e58.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> Bybit</span>
+                                        </a><a target="_blank" href="https://gate.io/trade/ladys_usdt"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Gate.9a19d908.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/Gate.9a19d908.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/Gate.9a19d908.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> Gate</span>
+                                        </a><a target="_blank" href="https://www.huobi.com/en-us/exchange/ladys_usdt"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/houbi.cf995517.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/houbi.cf995517.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/houbi.cf995517.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> Huobi</span>
+                                        </a><a target="_blank"
+                                            href="https://www.bitget.com/en/spot/ladysusdt_SPBL?type=spot"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Bitget.0328ee1c.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/Bitget.0328ee1c.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/Bitget.0328ee1c.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> Bitget</span>
+                                        </a><a target="_blank" href="https://www.mexc.com/exchange/LADYS_USDT"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/Mexc.0f369919.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/Mexc.0f369919.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/Mexc.0f369919.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> MEXC</span>
+                                        </a><a target="_blank"
+                                            href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0x12970E6868f88f6557B76120662c1B3E50A646bf"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/uniswapHorse.65d525d5.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/uniswapHorse.65d525d5.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/uniswapHorse.65d525d5.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> V2 (ERC20)</span>
+                                        </a><a target="_blank"
+                                            href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0x3b60FF35D3f7F62d636b067dD0dC0dFdAd670E4E"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/uniswapHorse.65d525d5.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/uniswapHorse.65d525d5.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/uniswapHorse.65d525d5.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> V3 (ARB)</span>
+                                        </a><a target="_blank"
+                                            href="https://www.dextools.io/app/en/ether/pair-explorer/0xcbe856765eeec3fdc505ddebf9dc612da995e593"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/dextools.32ae9858.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/dextools.32ae9858.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/dextools.32ae9858.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> (ERC20)</span>
+                                        </a><a target="_blank"
+                                            href="https://www.dextools.io/app/en/arbitrum/pair-explorer/0x1371e3f8fb588a520d43e816cfbeb6e94078b5e6%5D"
+                                            class="w-[48%] bg-[#fff] h-[52px] md:mr-0 md:max-w-[210px] md:h-[56px] mb-[16px] last:mb-0 text-[#364C18] italic text-[20px] border-solid border-[1px] border-[#364C18] shadow-[2px_2px_0_#58362C] justify-center flex items-center cursor-pointer font-normal leading-7">
+                                            <div class="w-[32px] h-[32px] mr-[10px]"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="token logo"
+                                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/dextools.32ae9858.svg"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                                                        srcset="https://milady.gg/_next/static/media/dextools.32ae9858.svg?auto=format&amp;fit=max&amp;w=32 1x, https://milady.gg/_next/static/media/dextools.32ae9858.svg?auto=format&amp;fit=max&amp;w=64 2x"><noscript></noscript></span>
+                                            </div><span> (ARB)</span>
+                                        </a></div>
+                                    <div
+                                        class="flex flex-wrap justify-between md:justify-evenly mt-[32px] md:mt-[24px] md:mx-auto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                                <span
+                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                            alt="" aria-hidden="true"
+                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                        alt="star icon"
+                                        src="./Welcome to LADYS, the meme coin of Milady NFT collection._files/starIcon.a46a8947.png"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                        srcset="https://milady.gg/_next/static/media/starIcon.a46a8947.png?auto=format&amp;fit=max&amp;w=384 1x, https://milady.gg/_next/static/media/starIcon.a46a8947.png?auto=format&amp;fit=max&amp;w=640 2x"><noscript></noscript></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about" class="w-full px-[16px] md:px-0 ">
+                        <div class="w-full max-w-[912px] bg-[#3333333] mx-auto">
+                            <div class="w-full mx-auto text-center">
+                                <div
+                                    class="font-bold text-[40px] leading-[56px] md:text-[64px] md:leading-[64px] font-font_primary uppercase text-[#262626]">
+                                    About</div>
+                                <div
+                                    class="mt-[32px] font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[28px] text-[#262626] font-text font-style italic">
+                                    Welcome to LADYS, the meme coin of Milady NFT collection. LADYS is the tokenisation
+                                    of the fully memetically optimized white pill.</div>
+                                <div
+                                    class="font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[28px] text-[#262626] mt-[16px] font-text font-style italic">
+                                    LADYS is not another meme coin. LADYS is a self-organised meme coin. LADYS is the
+                                    drip currency. LADYS is the points for karma, charm and beauty. LADYS is the
+                                    accumulation of clout.</div>
+                                <div
+                                    class="font-normal text-[16px] leading-[24px] md:text-[20px] md:leading-[28px] text-[#262626] mt-[16px] font-text font-style italic">
+                                    Milady meme coin is LADYS, and LADYS is the meme coin for Milady.</div>
+                            </div>
+                            <div class=" hidden md:block mt-[48px]"><span
+                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                            alt="" aria-hidden="true"
+                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27916%27%20height=%27468%27/%3e"
+                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                        alt="lady NFT"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                            </div>
+                            <div class="md:hidden mt-[32px] mx-auto max-w-[382px]"><span
+                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                            alt="" aria-hidden="true"
+                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27386%27%20height=%27426%27/%3e"
+                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                        alt="lady NFT"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                            </div>
+                        </div>
+                        <div
+                            class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                            <span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="star icon"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                        </div>
+                    </div>
+                    <div class="px-[17px] lg:px-0 md:mt-0">
+                        <div
+                            class="w-full lg:w-[800px] relative lg:mx-auto bg-[#fff] border-solid border-2 border-[#262626] rounded-tl-2xl rounded-tr-2xl shadow-[4px_4px_0_#121212]">
+                            <div
+                                class=" bg-[#ED9D70] py-[10px] px-6 flex justify-between items-center rounded-tl-2xl rounded-tr-2xl border-b-2 border-solid border-[#262626]">
+                                <div class="flex space-x-3"><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span></div>
+                                <div class="flex space-x-3">
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-12 px-8">
+                                <h2
+                                    class="text-3xl lg:text-[40px] text-color_text text-center font-bold font-font_primary">
+                                    Airdrop claim period ended!</h2>
+                                <p
+                                    class="mt-8 mb-6 text-color_text font-text italic text-[16px] font-normal text-center">
+                                    A total of 8,880,008,880,008.88 (1% total supply) $LADYS tokens are now available to
+                                    be claimed by holders of Milady NFT and $PEPE token.</p>
+                                <p
+                                    class="mt-6 mb-8 text-color_text w-full lg:w-[75%] mx-auto font-text italic text-[16px] font-normal text-center">
+                                    $LADYS tokens that have not been claimed within 7 days will be burned. 2023.05.08
+                                    09:00 (UTC+0) - 2023.05.15 09:00 (UTC+0)</p>
+                                <div class="mt-8">
+                                    <p
+                                        class="flex items-center justify-between text-base font-medium font-text text-[#1F1310]">
+                                        <span>Received</span><span>8,880,008,880,008.88</span></p>
+                                    <div class="w-full h-[14px] rounded-[10px] bg-[rgba(38,38,38,0.16)] group">
+                                        <div class="relative bg-color_text h-full rounded-[10px] transition-all delay-500 duration-1000"
+                                            style="width: 100%;"></div>
+                                    </div>
+                                </div><button disabled=""
+                                    class="block bg-color_text opacity-50 text-[#fff] w-full py-[10px] mt-8 border-solid border-[1px] border-color_text shadow-[2px_2px_0_#1C0E0A]">Claim
+                                    Airdrop</button>
+                            </div>
+                        </div>
+                        <div
+                            class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                            <span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="star icon"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                        </div>
+                    </div>
+                    <div id="howtobuy" class="w-full px-[16px] overflow-hidden md:overflow-auto">
+                        <div class="w-full max-w-[1220px] mx-auto">
+                            <div>
+                                <div
+                                    class="font-bold text-[40px] leading-[56px] md:text-[64px] md:leading-[72px] text-center text-[#262626] uppercase font-font_primary">
+                                    how to buy</div>
+                                <div class="mt-[32px] md:mt-[50px] z-10 relative">
+                                    <div
+                                        class="w-full h-auto p-[16px] border-solid border-[1px] border-[#262626] bg-[#FFFFFF] md:px-[40px] md:py-[48px] rounded-[16px] mb-[20px] block md:flex md:justify-between shadow-[4px_4px_0px_#121212]">
+                                        <div
+                                            class="flex w-full max-w-[382px] md:max-w-[214px] md:items-center md:justify-end md:mr-[30px]">
+                                            <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%27125%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="logo"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="font-bold text-[24px] leading-[32px] mt-[24px] md:mt-0 md:text-[32px] md:leading-[36px] font-font_primary">
+                                                Create a Wallet</div>
+                                            <div
+                                                class="font-normal text-[14px] leading-[20px] md:text-[20px] md:leading-[28px] max-w-[880px] mt-[16px] font-text italic">
+                                                Download Metamask or your wallet of choice from the app store or google
+                                                play store for free. For desktop users, download the google chrome
+                                                extension by going to metamask.io.</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-full h-auto p-[16px] border-solid border-[1px] border-[#262626] bg-[#FFFFFF] md:px-[40px] md:py-[48px] rounded-[16px] mb-[20px] block md:flex md:justify-between shadow-[4px_4px_0px_#121212]">
+                                        <div
+                                            class="flex w-full max-w-[382px] md:max-w-[214px] md:items-center md:justify-end md:mr-[30px]">
+                                            <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%27126%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="logo"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="font-bold text-[24px] leading-[32px] mt-[24px] md:mt-0 md:text-[32px] md:leading-[36px] font-font_primary">
+                                                Get Some ETH</div>
+                                            <div
+                                                class="font-normal text-[14px] leading-[20px] md:text-[20px] md:leading-[28px] max-w-[880px] mt-[16px] font-text italic">
+                                                Have ETH in your wallet to switch to $LADYS. If you don’t have any ETH,
+                                                you can buy directly on metamask, transfer from another wallet, or buy
+                                                on another exchange and send it to your wallet.</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-full h-auto p-[16px] border-solid border-[1px] border-[#262626] bg-[#FFFFFF] md:px-[40px] md:py-[48px] rounded-[16px] mb-[20px] block md:flex md:justify-between shadow-[4px_4px_0px_#121212]">
+                                        <div
+                                            class="flex w-full max-w-[382px] md:max-w-[214px] md:items-center md:justify-end md:mr-[30px]">
+                                            <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%27125%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="logo"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="font-bold text-[24px] leading-[32px] mt-[24px] md:mt-0 md:text-[32px] md:leading-[36px] font-font_primary">
+                                                Go to Uniswap</div>
+                                            <div
+                                                class="font-normal text-[14px] leading-[20px] md:text-[20px] md:leading-[28px] max-w-[880px] mt-[16px] font-text italic">
+                                                Connect to Uniswap. Go to app.uniswap.org in google chrome or on the
+                                                browser inside your Metamask app. Connect your wallet. Paste the $LADYS
+                                                token address into Uniswap, select Milady, and confirm. When Metamask
+                                                prompts you for a wallet signature, sign.</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-full h-auto p-[16px] border-solid border-[1px] border-[#262626] bg-[#FFFFFF] md:px-[40px] md:py-[48px] rounded-[16px] mb-[20px] block md:flex md:justify-between shadow-[4px_4px_0px_#121212]">
+                                        <div
+                                            class="flex w-full max-w-[382px] md:max-w-[214px] md:items-center md:justify-end md:mr-[30px]">
+                                            <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%27126%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="logo"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="font-bold text-[24px] leading-[32px] mt-[24px] md:mt-0 md:text-[32px] md:leading-[36px] font-font_primary">
+                                                Switch ETH for $LADYS</div>
+                                            <div
+                                                class="font-normal text-[14px] leading-[20px] md:text-[20px] md:leading-[28px] max-w-[880px] mt-[16px] font-text italic">
+                                                Switch ETH for $LADYS. We have ZERO taxes so you don’t need to worry
+                                                about buying with a specific slippage, although you may need to use
+                                                slippage during times of market volatility.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-[150px] md:mt-[60px] flex flex-col lg:flex-row justify-between items-center">
+                                    <div class="md:w-[599px] h-[422px] md:h-[521px] relative flex justify-center ">
+                                        <div class="hidden md:block w-[599px] h-[521px]"><span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27606%27%20height=%27521%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="unix lady"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                        </div>
+                                        <div class="md:hidden w-full h-[422px]"><span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                        alt="" aria-hidden="true"
+                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27382%27%20height=%27423%27/%3e"
+                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                    alt="unix lady"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    decoding="async" data-nimg="intrinsic" class="md:hidden"
+                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                        </div>
+                                        <div
+                                            class="absolute w-[334px] h-[392px] sm:h-auto md:w-[430px] md:h-[457px] bg-[#FFFFFF] rounded-t-3xl bottom-2 pt-[32px] px-[16px] md:px-[40px] flex-col text-center italic">
+                                            <div class="w-[50px] h-[50px] mx-auto"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2750%27%20height=%2751%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="avatar"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                            </div>
+                                            <div class="w-[82px] h-[28px] mt-[12px] mx-auto"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2782%27%20height=%2729%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="caution"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                            </div>
+                                            <div
+                                                class="text-center font-normal text-[14px] leading-5 md:text-[16px] md:leading-6 text-[#262626] mt-[16px] md:mt-[20px] font-text">
+                                                This token isn’t traded on leading U.S. centralized exchanges. Always
+                                                conduct your own research before trading.</div>
+                                            <div
+                                                class="w-full py-[6px] px-[16px] flex item-center justify-between bg-[#FCE7F1] mt-[16px] md:mt-[20px] rounded-lg">
+                                                <div class="text-[#E6368C] font-normal text-[14px] leading-6">
+                                                    https://etherscan.io/token/0x1297...</div><button
+                                                    class="w-[16px] h-[16px]"><a
+                                                        href="https://etherscan.io/token/0x12970E6868f88f6557B76120662c1B3E50A646bf"
+                                                        target="_blank"><span
+                                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                    alt="" aria-hidden="true"
+                                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2717%27/%3e"
+                                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                alt="directionalIcon"
+                                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                decoding="async" data-nimg="intrinsic"
+                                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></a></button><button
+                                                    class="w-[16px] h-[16px]"><span
+                                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                alt="" aria-hidden="true"
+                                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2717%27/%3e"
+                                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                            alt="coppyIcon"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                            decoding="async" data-nimg="intrinsic"
+                                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></button>
+                                            </div>
+                                            <div
+                                                class="w-full py-[6px] px-[16px] flex item-center justify-between bg-[#FCE7F1] mt-[8px] md:mt-[10px] rounded-lg">
+                                                <div class="text-[#E6368C] font-normal text-[14px] leading-6">
+                                                    https://arbiscan.io/token/0x3b60ff...</div><button
+                                                    class="w-[16px] h-[16px]"><a
+                                                        href="https://arbiscan.io/token/0x3b60ff35d3f7f62d636b067dd0dc0dfdad670e4e"
+                                                        target="_blank"><span
+                                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                    alt="" aria-hidden="true"
+                                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2717%27/%3e"
+                                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                alt="directionalIcon"
+                                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                decoding="async" data-nimg="intrinsic"
+                                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></a></button><button
+                                                    class="w-[16px] h-[16px]"><span
+                                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                alt="" aria-hidden="true"
+                                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2717%27/%3e"
+                                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                            alt="coppyIcon"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                            decoding="async" data-nimg="intrinsic"
+                                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></button>
+                                            </div><button
+                                                class="w-full h-[40px] md:h-[48px] bg-[#E6368C] mt-[16px] md:mt-[20px] text-[#FFFFFF] font-normal text-[16px] leading-6 italic rounded-lg">I
+                                                understand</button><button
+                                                class="font-normal text-[16px] leading-6 mt-[16px] md:mt-[21px] text-[#79809D] font-text italic">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:block md:w-[521px] md:h-[521px] mt-[16px] lg:mt-0"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27521%27%20height=%27521%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="nft"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                    </div>
+                                    <div
+                                        class="md:hidden w-[382px] h-[382] md:w-[521px] md:h-[521px] mt-[16px] lg:mt-0">
+                                        <span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27488%27%20height=%27489%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="nft"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden"><span
+                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                            alt="" aria-hidden="true"
+                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                        alt="token"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span><span
+                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                            alt="" aria-hidden="true"
+                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27200%27/%3e"
+                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                        alt="token"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                            </div>
+                        </div>
+                        <div
+                            class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                            <span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="star icon"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                        </div>
+                    </div>
+                    <div id="tokenomics" class=" relative">
+                        <div class="w-full xl:w-[1228px] xl:max-w-[1228px] mx-auto">
+                            <h1
+                                class="text-color_text text-center text-[56px] xl:text-[64px] font-bold font-font_primary">
+                                TOKENOMICS</h1>
+                            <div
+                                class="mt-10 xl:mt-[60px] flex flex-col space-y-10 xl:space-y-0 xl:justify-between xl:flex-row w-full px-[17px] xl:px-0">
+                                <div class="w-full xl:w-1/2 font-font_primary">
+                                    <div class="text-color_text text-center font-bold text-2xl xl:text-[32px]">
+                                        <p>Total supply:</p>
+                                        <p class="mt-1">888,000,888,000,888</p>
+                                    </div>
+                                    <div
+                                        class="mt-6 py-6 px-4 lg:p-8 shadow-[4px_4px_0_#262626] border-solid border-[1px] border-border_color text-[#1F1310] font-medium text-base xl:text-2xl font-text italic bg-[#fff]">
+                                        <p class="mb-8">94% of the tokens were sent to the liquidity pool (LP). LP
+                                            tokens were burnt, and the contract is renounced.</p>
+                                        <p class="mb-8">1% of the supply were airdropped to all $PEPE and Milady NFT
+                                            holders.</p>
+                                        <p>The remaining 5% of the supply is being held in a multi-sig wallet only to be
+                                            used as tokens for future centralized exchange listings, bridges, and
+                                            liquidity pools. This wallet is easily trackable with the ENS name
+                                            “miladymeme.eth”</p>
+                                    </div>
+                                </div>
+                                <div class="hidden lg:flex justify-center"><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27500%27%20height=%27500%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            alt="chart"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            decoding="async" data-nimg="intrinsic"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                </div>
+                                <div class="lg:hidden flex justify-center"><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27500%27%20height=%27500%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            alt="chart"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            decoding="async" data-nimg="intrinsic"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                            <span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="star icon"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                        </div>
+                    </div>
+                    <div id="roadmap" class="relative mb-[70px]">
+                        <div class="w-full xl:w-[1228px] xl:max-w-[1228px] mx-auto px-[17px] xl:px-0 ">
+                            <h1
+                                class="text-color_text text-center text-[56px] xl:text-[64px] font-bold font-font_primary">
+                                LADYS ROADMAP</h1>
+                            <div
+                                class="bg-[#fff] w-fit mx-auto text-[#1F1310] mt-10 font-text italic text-xl xl:text-2xl text-center p-8 border-solid border-[1px] border-border_color shadow-[4px_4px_0_#262626]">
+                                <p class="font-medium">Phase 1: Launch</p>
+                                <p class="font-medium">Phase 2: Vibe and HODL</p>
+                                <p class="font-medium">Phase 3: Milady Takeover</p>
+                            </div>
+                            <p
+                                class="w-full xl:w-4/5 mx-auto italic text-center text-xl xl:text-2xl text-color_text my-10 font-medium">
+                                The path is never promised but it gets clearer with each step.</p>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-8">
+                                <div
+                                    class="bg-[#fff] p-8 border-solid h-[312px] border-[1px] border-border_color shadow-[4px_4px_0_#262626]">
+                                    <h2
+                                        class="font-bold text-center text-2xl xl:text-[32px] text-color_text font-font_primary">
+                                        Phase 1</h2>
+                                    <ul
+                                        class="list-disc text-color_text font-text text-base xl:text-xl font-medium italic mt-3 xl:mt-6">
+                                        <li>Launch</li>
+                                        <li>CoinGecko/Coinmarketcap Listings</li>
+                                        <li>1,000+ Holders</li>
+                                        <li>Get $LADYS trending on twitter with unbridled memetic power</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-[#fff] p-8 border-solid h-[312px] border-[1px] border-border_color shadow-[4px_4px_0_#262626]">
+                                    <h2
+                                        class="font-bold text-center text-2xl xl:text-[32px] text-color_text font-font_primary">
+                                        Phase 2</h2>
+                                    <ul
+                                        class="list-disc text-color_text font-text text-base xl:text-xl font-medium italic mt-3 xl:mt-6">
+                                        <li>Community Partnerships</li>
+                                        <li>Milady Times digital newsletter</li>
+                                        <li>Formation of token gated discord group, Milady Palace for holders, more
+                                            details TBA</li>
+                                        <li>CEX Listings 10,000+ holders</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-[#fff] p-8 border-solid h-[312px] border-[1px] border-border_color shadow-[4px_4px_0_#262626]">
+                                    <h2
+                                        class="font-bold text-center text-2xl xl:text-[32px] text-color_text font-font_primary">
+                                        Phase 3</h2>
+                                    <ul
+                                        class="list-disc text-color_text font-text text-base xl:text-xl font-medium italic mt-3 xl:mt-6">
+                                        <li>Milady Merchandise</li>
+                                        <li>Milady Academy</li>
+                                        <li>Milady Tools</li>
+                                        <li>T1 Exchange Listings 100,000+ holders</li>
+                                        <li>$LADYS becoming the quintessential token for internet spirituality</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="my-[56px] md:my-[80px] max-w-[217px] h-[91px] md:max-w-[265px] md:h-[114px] mx-auto">
+                            <span
+                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27282%27%20height=%27130%27/%3e"
+                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                    alt="star icon"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                        </div>
+                    </div>
+                    <div class="relative px-[17px] xl:px-0 mb-[48px] lg:mb-[80px]">
+                        <div
+                            class="w-full xl:w-[1228px] xl:max-w-[1228px] mx-auto xl:mb-[130px] xl:px-0 border-2 border-[#262626] rounded-tl-2xl rounded-tr-2xl shadow-[4px_4px_0_#121212]">
+                            <div
+                                class=" bg-[#EB94CD] py-[10px] px-6 flex justify-between items-center rounded-tl-2xl rounded-tr-2xl">
+                                <div class="flex space-x-3"><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span><span
+                                        class="inline-block w-4 h-4 bg-[#fff] rounded-full"></span></div>
+                                <div class="flex space-x-3">
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                    <div class="w-[19px] h-[19px]"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2719%27%20height=%2719%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                alt="icon"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-solid border-[1px] border-border_color py-12 px-8 bg-[#fff]">
+                                <h1
+                                    class="text-color_text text-center text-[56px] xl:text-[64px] font-bold font-font_primary">
+                                    CONTACT</h1>
+                                <div class="w-full lg:w-fit mx-auto flex flex-col mt-8 xl:mt-[60px]">
+                                    <div class="mx-4 flex items-center justify-center font-font_primary"><span
+                                            style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                    alt="" aria-hidden="true"
+                                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2780%27/%3e"
+                                                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                decoding="async" data-nimg="intrinsic"
+                                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span><span
+                                            class="text-[#262626] text-[40px] xl:text-[48px] font-bold ml-4">Milady</span>
+                                    </div>
+                                    <div class="flex justify-center mt-8 space-x-6">
+                                        <div class="w-10 h-10 lg:w-[64px] lg:h-[64px] cursor-pointer"><a target="_blank"
+                                                href="https://twitter.com/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2764%27%20height=%2764%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-10 h-10 lg:w-[64px] lg:h-[64px] cursor-pointer"><a target="_blank"
+                                                href="https://t.me/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2764%27%20height=%2764%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></a>
+                                        </div>
+                                        <div class="w-10 h-10 lg:w-[64px] lg:h-[64px] cursor-pointer"><a target="_blank"
+                                                href="https://discord.com/invite/miladymemecoin"><span
+                                                    style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                            alt="" aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2764%27%20height=%2764%27/%3e"
+                                                            style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                        alt="icon"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        decoding="async" data-nimg="intrinsic"
+                                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p
+                                    class="text-color_text italic text-xl xl:text-[28px] text-center mt-8 w-full xl:w-[1140px] xl:leading-[44px]">
+                                    $LADYS coin has no association with Charlotte Fang or her creation Milady Maker.
+                                    This token is simply paying homage to a NFT collection we all love and recognize.
+                                </p>
+                                <p
+                                    class="text-color_text italic text-xl xl:text-[28px] text-center mt-8 w-full xl:w-[1140px] xl:leading-[44px]">
+                                    $LADYS is a meme coin with no intrinsic value or expectation of financial return.
+                                    There is no formal team or roadmap. The coin is completely useless and for
+                                    entertainment purposes only.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#1F1310] text-[#fff] text-base text-center font-normal font-text py-4">© 2023 by
+                        MILADY. All rights reserved! All Milady meme coin branding and assets are copylefted under the
+                        <a class="underline text-[#FF85C0]" target="_blank" href="https://viralpubliclicense.org/">Viral
+                            Public License</a></div>
+                </div>
+            </div>
+        </main><w3m-modal><template shadowrootmode="open"><!----><w3m-explorer-context><template
+                        shadowrootmode="open"><!----></template></w3m-explorer-context><w3m-theme-context><template
+                        shadowrootmode="open"><!----></template></w3m-theme-context><!--?lit$7216409033$--><w3m-wc-connection-context><template
+                        shadowrootmode="open"><!----></template></w3m-wc-connection-context><w3m-account-context><template
+                        shadowrootmode="open"><!----></template></w3m-account-context><w3m-network-context><template
+                        shadowrootmode="open"><!----></template></w3m-network-context>
+                <div id="w3m-modal" role="alertdialog" aria-modal="true" class=" w3m-overlay ">
+                    <div class="w3m-container" tabindex="0"><!--?lit$7216409033$--></div>
+                </div>
+            </template></w3m-modal>
+        <div class="Toastify"></div>
+    </div>
+    <script id="__NEXT_DATA__"
+        type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"M5TQyB6St4nOSpsrY7_-8","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+    <next-route-announcer>
+        <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+        </p>
+    </next-route-announcer>
+    <div class="ReactModalPortal"></div>
+    <div id="yt_article_summary_widget_wrapper" class="yt_article_summary_widget_wrapper" style="display: none;">
+        <div id="yt_article_summary_widget" class="yt_article_summary_widget"><svg style="filter: brightness(0.8);"
+                width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-outside-1_3606_3145" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22"
+                    fill="black">
+                    <rect fill="white" x="1" y="1" width="22" height="22"></rect>
+                    <path
+                        d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z">
+                    </path>
+                </mask>
+                <path
+                    d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z"
+                    fill="#828282"></path>
+                <path
+                    d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z"
+                    stroke="#828282" stroke-width="0.2" mask="url(#path-1-outside-1_3606_3145)"></path>
+            </svg></div>
+        <div id="yt_article_summary_close_button" class="yt_article_summary_close_button">×</div>
+    </div>
 </body>
+
 </html>
