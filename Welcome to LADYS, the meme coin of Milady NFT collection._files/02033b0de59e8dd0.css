@@ -3026,7 +3026,7 @@ html {
 .navbar {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(50p x);
     border: 1px solid #1f1310
 }
 
